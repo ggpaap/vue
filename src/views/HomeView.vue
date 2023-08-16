@@ -10,6 +10,12 @@ onMounted(async() => {
   genres.value = genres
 })
 
+
+function save() {
+  genreService.saveGenre()
+
+}
+
 </script>
 
 <template>
@@ -21,5 +27,5 @@ onMounted(async() => {
   <hr/><ul>
     <li v for="genre in genres" :Key="genre.id">{{ genre.name }}</li>
   </ul>
-  
+
 </template>
