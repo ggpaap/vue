@@ -11,3 +11,4 @@ class GenreService {
     }
 }
 
+export default new GenreService()

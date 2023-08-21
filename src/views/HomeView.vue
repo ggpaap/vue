@@ -10,6 +10,7 @@ const currentGenre = ref ({
 
 onMounted(async() => {
   const data = await genreService.getAllGenres()
+  console.log(data)
   genres.value = data
 })
 
@@ -33,12 +34,47 @@ async function save() {
 
 <template>
   <header>
-    <h3>Lanches</h3> 
-    <h3>Bebidas</h3>
-    <h3>Sobremesas</h3>
+    <div class="title">
+      <h3></h3>
+    </div>
+    <div class="form_input">
+      <button @click="add">lanches</button>
+      <button @click="add">Bebidas</button>
+      <button @click="add">Sobremesas</button>
+    </div>
+    <div class="navbar">
+    </div>
   </header>
-  <hr/><ul>
-    <li v for="genre in genres" :Key="genre.id">{{ genre.name }}</li>
+  <hr/>
+  <ul>
+    <li v-for="genre in genres" :key="genre.id">{{ genre.name }}</li>
   </ul>
 
 </template>
+
+<style scoped>
+header {
+  height: 50px;
+  width: 100%;
+  background-color: #999595;
+  color: #EAEAEA;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+header span {
+  padding: 0 20px;
+}
+h3{
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+</style>
