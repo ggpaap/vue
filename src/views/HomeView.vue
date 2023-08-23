@@ -33,18 +33,7 @@ async function save() {
 </script>
 
 <template>
-  <header>
-    <div class="title">
-      <h3></h3>
-    </div>
-    <div class="form_input">
-      <button @click="add">lanches</button>
-      <button @click="add">Bebidas</button>
-      <button @click="add">Sobremesas</button>
-    </div>
-    <div class="navbar">
-    </div>
-  </header>
+  
   <hr/>
   <ul>
     <li v-for="genre in genres" :key="genre.id">{{ genre.name }}</li>
@@ -54,20 +43,14 @@ async function save() {
 
 <style scoped>
 header {
-  height: 50px;
-  width: 100%;
-  background-color: #999595;
-  color: #EAEAEA;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  font-family: 'Times New Roman', Times, serif;
+
 }
 header span {
   padding: 0 20px;
 }
+
+
+
 h3{
   font-family: "Times New Roman", Times, serif;
   text-align: center;

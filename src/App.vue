@@ -3,76 +3,72 @@
 
 <template>
   <header>
-    <h1>Ourfood</h1>
+    <div class="logo">
+      <img alt="Vue logo" src="@/assets/imgs/icon.jpeg">
+      <h1>OURFOOD</h1>
+      <img alt="carrinho" src="@/assets/imgs/carrinho.jpg">
+      <img alt="perfil" src="@/assets/imgs/perfil.jpg">
+
+    </div>
+      <div class="btns">
+        <button class="btn-links" @click="add">lanches</button>
+        <button class="btn-links" @click="add">Bebidas</button>
+        <button class="btn-links" @click="add">Sobremesas</button>
+      </div>    
   </header>
   <main>
     <RouterView />
   </main>
-
 </template>
 
 <style scoped>
-h1 {
-  line-height: 1.5;
-  max-height: 100vh;
-  text-align: center;
-  color: #FF842B;
-}
-
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  padding-right: calc(var(--section-gap) / 2);
 }
 
-nav {
+.logo img {
+  /* position: absolute; */
+  width: 48px;
+  height: 48px;
+}
+
+.logo h1 {
+  line-height: 0.3;
+  max-height: 100vh;
+  color: #FF842B;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  margin-left: 1.5vw;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  height: 30px;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  background-color: #F5F5F5;
+  color: #EAEAEA;
+  font-size: 1.5em;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0.2px;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
+.btn-links {
   border: 0;
+  background-color: lightgray;
+  padding: 0.5vw;
+  width: 150px;
+  margin: 0 1vw;
+  border-radius: 5px;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.btn-links:hover {
+  font-weight: bold;
+  background-color: rgb(192, 189, 189);
 }
 </style>
