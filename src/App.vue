@@ -6,8 +6,12 @@
     <div class="logo">
       <img alt="Vue logo" src="@/assets/imgs/icon.jpeg">
       <h1>OURFOOD</h1>
+      <div class="carrinho">
       <img alt="carrinho" src="@/assets/imgs/carrinho.jpg">
-      <img alt="perfil" src="@/assets/imgs/perfil.jpg">
+      </div>
+      <div class="perfil">
+        <img alt="perfil" src="@/assets/imgs/perfil.jpg">
+      </div>
 
     </div>
       <div class="btns">
@@ -23,6 +27,18 @@
 
 <style scoped>
 .logo {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  padding-right: calc(var(--section-gap) / 2);
+}
+.carrinho {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  padding-right: calc(var(--section-gap) / 2);
+}
+.perfil {
   display: flex;
   flex-direction: row;
   place-items: center;
