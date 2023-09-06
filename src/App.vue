@@ -22,7 +22,7 @@ function perfil() {
       </div>
     </div>
     <div class="btns">
-      <button class="btn-links" @click="add">lanches</button>
+      <button class="btn-links" @click="add">Lanches</button>
       <button class="btn-links" @click="add">Bebidas</button>
       <button class="btn-links" @click="add">Sobremesas</button>
     </div>
