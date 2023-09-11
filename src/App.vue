@@ -31,6 +31,15 @@ function perfil() {
     <RouterView />
   </main>
   <h2>Lanches</h2>
+<script>
+ import Carousel from '../components/Carousel.vue'; 
+
+ export default {
+  components: {
+    Carousel,
+  },
+ };
+</script>
 </template>
 
 <style scoped>
