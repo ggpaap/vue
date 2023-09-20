@@ -42,9 +42,6 @@ async function save() {
 </template>
 
 <style scoped>
-header {
-
-}
 header span {
   padding: 0 20px;
 }
