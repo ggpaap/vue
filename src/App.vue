@@ -19,9 +19,6 @@ function perfil() {
       </div>
     </div>
     <div class="btns">
-      Lanches
-      Bebidas
-      Sobremesas
     </div>
   </header>
   <main>
