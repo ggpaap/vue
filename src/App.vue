@@ -1,11 +1,8 @@
 <script setup>
 
-function add() {
-  alert("add")
-}
 
 function perfil() {
-  alert('perfil')
+  alert('admin')
 }
 
 </script>
@@ -18,20 +15,21 @@ function perfil() {
         <h1>OURFOOD</h1>
       </div>
       <div class="icons">
-        <img @click="add" alt="carrinho" src="@/assets/imgs/carrinho.jpeg">
-        <img @click="perfil" alt="perfil" src="@/assets/imgs/perfil.jpeg">
+        <img @click="perfil" alt="admin" src="@/assets/imgs/perfil.jpeg">
       </div>
     </div>
     <div class="btns">
-      <button class="btn-links" @click="add">Lanches</button>
-      <button class="btn-links" @click="add">Bebidas</button>
-      <button class="btn-links" @click="add">Sobremesas</button>
+      Lanches
+      Bebidas
+      Sobremesas
     </div>
   </header>
   <main>
     <RouterView />
   </main>
   <h2>Lanches</h2>
+  <h2>Sobremesas</h2>
+  <h2>Bebidas</h2>
 </template>
 
 <style scoped>
