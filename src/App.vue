@@ -1,12 +1,3 @@
-<script setup>
-
-
-function perfil() {
-  alert('admin')
-}
-
-</script>
-
 <template>
   <header>
     <div class="row-logo">
@@ -22,13 +13,28 @@ function perfil() {
     </div>
   </header>
   <main>
-    <RouterView />
+    <router-view></router-view>
   </main>
   <h2>Lanches</h2>
   <h2>Sobremesas</h2>
   <h2>Bebidas</h2>
 </template>
+<script>
+ import { useRoute } from "vue-router";
 
+export default {
+     setup() {
+    const route = useRoute();
+
+    
+    function perfil() {
+      alert("admin");
+    }
+
+    return { route, perfil };
+  },
+};
+</script>
 <style scoped>
 
 .logo {
