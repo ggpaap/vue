@@ -38,7 +38,9 @@ async function save() {
   <ul>
     <li v-for="genre in genres" :key="genre.id">{{ genre.name }}</li>
   </ul>
-
+  <h2>Lanches</h2>
+  <h2>Sobremesas</h2>
+  <h2>Bebidas</h2>
 </template>
 
 <style scoped>

@@ -62,17 +62,19 @@
   
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 93%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 6px;
+  
+
   }
   
   button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #FF842B;
     color: #fff;
     border: none;
     border-radius: 3px;

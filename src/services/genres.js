@@ -1,7 +1,7 @@
 import api from '../plugins/api';
 
 class GenreService {
-    async getAllgenres(){
+    async getAllGenres(){
         const response = await api.get('/genres')
         return response.data
     }

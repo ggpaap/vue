@@ -1,12 +1,24 @@
+  <script setup>
+    import { useRouter } from "vue-router";
+    const router = useRouter();
+   
+    function goToLogin() {
+      router.push('/login')
+    }
+    // function goToHome() {
+    //   router.push('/home')
+    // }
+  </script>
+
 <template>
   <header>
     <div class="row-logo">
       <div class="logo">
-        <img alt="Vue logo" src="@/assets/imgs/icon.jpeg">
+        <img alt="Vue logo" @click="goToHome" src="@/assets/imgs/icon.jpeg">
         <h1>OURFOOD</h1>
       </div>
       <div class="icons">
-        <img @click="perfil" alt="admin" src="@/assets/imgs/perfil.jpeg">
+        <img @click="goToLogin" alt="admin" src="@/assets/imgs/perfil.jpeg">
       </div>
     </div>
     <div class="btns">
@@ -15,26 +27,8 @@
   <main>
     <router-view></router-view>
   </main>
-  <h2>Lanches</h2>
-  <h2>Sobremesas</h2>
-  <h2>Bebidas</h2>
+
 </template>
-<script>
- import { useRoute } from "vue-router";
-
-export default {
-     setup() {
-    const route = useRoute();
-
-    
-    function perfil() {
-      alert("admin");
-    }
-
-    return { route, perfil };
-  },
-};
-</script>
 <style scoped>
 
 .logo {
@@ -112,7 +106,7 @@ export default {
 
 .btn-links:hover {
   font-weight: bold;
-  background-color: rgb(192, 189, 189);
+  background-color: rgb(182, 167, 167);
 
 }
 .logo h2 {
