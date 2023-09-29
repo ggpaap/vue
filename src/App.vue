@@ -1,13 +1,18 @@
   <script setup>
     import { useRouter } from "vue-router";
+    import Cadastro from './views/CadastroPage.vue';
+
     const router = useRouter();
    
     function goToLogin() {
       router.push('/login')
     }
+
     // function goToHome() {
     //   router.push('/home')
     // }
+ 
+  
   </script>
 
 <template>
@@ -23,6 +28,10 @@
     </div>
     <div class="btns">
     </div>
+    <div id="app">
+    <Cadastro />
+  </div>
+
   </header>
   <main>
     <router-view></router-view>

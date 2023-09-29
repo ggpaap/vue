@@ -1,5 +1,4 @@
 
-
 <template>
     <div class="login">
       <h2>Login</h2>
@@ -13,8 +12,10 @@
           <input type="password" id="password" v-model="password" required>
         </div>
         <button type="submit">Entrar</button>
+        <button type="submit">Cadastrar</button>
       </form>
       <p v-if="error" class="error">{{ error }}</p>
+
     </div>
   </template>
   
@@ -29,13 +30,11 @@
     },
     methods: {
       login() {
-        // Aqui você pode adicionar a lógica de autenticação
         if (this.username === "seu_usuario" && this.password === "sua_senha") {
-          // Lógica de autenticação bem-sucedida, redirecione ou faça o que for necessário
-          // Por exemplo, redirecionar para outra página
+        
           this.$router.push("/dashboard");
         } else {
-          // Autenticação falhou, exiba uma mensagem de erro
+          
           this.error = "Usuário ou senha incorretos.";
         }
       }
@@ -73,6 +72,7 @@
   button {
     display: block;
     width: 100%;
+    margin-top: 10px;
     padding: 10px;
     background-color: #FF842B;
     color: #fff;
