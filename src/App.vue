@@ -11,9 +11,9 @@
     //   router.push('/cadastro')
     // }
 
-    // function goToHome() {
-    //   router.push('/home')
-    // }
+    function goToHome() {
+      router.push('/')
+    }
 
   
   </script>

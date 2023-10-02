@@ -12,7 +12,7 @@
           <input type="password" id="password" v-model="password" required>
         </div>
         <button type="submit">Entrar</button>
-        <button type="submit">Cadastrar</button>
+        <button @click="$router.push('/cadastro')">Cadastrar</button>
       </form>
       <p v-if="error" class="error">{{ error }}</p>
 
