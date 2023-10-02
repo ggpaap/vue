@@ -1,6 +1,5 @@
   <script setup>
     import { useRouter } from "vue-router";
-    import Cadastro from './views/CadastroPage.vue';
 
     const router = useRouter();
    
@@ -8,10 +7,14 @@
       router.push('/login')
     }
 
+    // function goToCadastro(){
+    //   router.push('/cadastro')
+    // }
+
     // function goToHome() {
     //   router.push('/home')
     // }
- 
+
   
   </script>
 
@@ -75,7 +78,7 @@
 }
 
 .row-logo img {
-  /* position: absolute; */
+ 
   width: 48px;
   height: 48px;
 }

@@ -30,7 +30,7 @@
     },
     methods: {
       login() {
-        if (this.username === "seu_usuario" && this.password === "sua_senha") {
+        if (this.username === "admin" && this.password === "admin") {
         
           this.$router.push("/dashboard");
         } else {
