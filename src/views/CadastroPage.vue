@@ -42,18 +42,16 @@
   </script>
   
   <style scoped>
-  /* Centralize o conteúdo verticalmente e horizontalmente */
+
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
     margin-bottom: 10px;
-    padding: 70px;
+    padding: 10px;
   }
 
-  /* Estilize o formulário */
   form {
     width: 300px;
     padding: 50px;
@@ -63,7 +61,6 @@
     text-align: center;
   }
 
-  /* Estilize o botão com a cor laranja */
   button[type="submit"] {
     display: block;
     width: 100%;
