@@ -1,22 +1,30 @@
-  <script setup>
-    import { useRouter } from "vue-router";
+<script setup>
+import CabecalhoCompAdmin from "./components/CabecalhoCompAdmin.vue";
+import CabecalhoCompNotLogged from "./components/CabecalhoCompNotLogged.vue";
+import { useAuthStore } from "@/stores/auth";
+const authStore = useAuthStore();
+// import { checkTokenExpiration } from "./tokenExpiration";
 
-    const router = useRouter();
-   
-    function goToLogin() {
-      router.push('/login')
-    }
+// setInterval(checkTokenExpiration, 60000);
 
-    // function goToCadastro(){
-    //   router.push('/cadastro')
-    // }
+  import { useRouter } from "vue-router";
 
-    function goToHome() {
-      router.push('/')
-    }
-
+  const router = useRouter();
   
-  </script>
+  function goToLogin() {
+    router.push('/login')
+  }
+
+  // function goToCadastro(){
+  //   router.push('/cadastro')
+  // }
+
+  function goToHome() {
+    router.push('/')
+  }
+
+
+</script>
 
 <template>
   <header>
@@ -32,7 +40,6 @@
     <div class="btns">
     </div>
     <div id="app">
-    <Cadastro />
   </div>
 
   </header>
