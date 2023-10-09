@@ -36,7 +36,7 @@ async function save() {
   
   <hr/>
   <ul>
-    <li v-for="genre in genres" :key="genre.id">{{ genre.name }}</li>
+    <li v-for="categoria in categorias" :key="categoria.id">{{ categoria.descricao }}</li>
   </ul>
   <h2>Lanches</h2>
   <h2>Sobremesas</h2>

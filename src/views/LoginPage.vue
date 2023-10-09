@@ -1,11 +1,10 @@
-
 <template>
     <div class="login">
       <h2>Login</h2>
       <form @submit.prevent="login">
         <div class="form-group">
           <label for="username">Usuário:</label>
-          <input type="text" id="username" v-model="username" required>
+          <input type="text" id="username" v-model="email" required>
         </div>
         <div class="form-group">
           <label for="password">Senha:</label>
@@ -19,25 +18,39 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    data() {
-      return {
-        username: "",
-        password: "",
-        error: ""
-      };
-    },
-    methods: {
-      login() {
-        if (this.username === "admin" && this.password === "admin") {
-        
-          this.$router.push("/dashboard");
-        } else {
-          
-          this.error = "Usuário ou senha incorretos.";
-        }
+  <script setup>
+  import { ref } from "vue";
+  import { useRouter } from "vue-router";
+  import axios from "axios";
+  const authStore = useAuthStore();
+  import { useAuthStore } from "@/stores/auth";
+  
+  const router = useRouter();
+  const email = ref("");
+  const password = ref("");
+  const errorMessage = ref("");
+  
+  const Logout = () => {
+    authStore.LogOut();
+    router.push("/admin/login");
+  };
+  const login = async () => {
+    try {
+      const response = await axios.post("http://localhost:19003/token/", {
+        email: email.value,
+        password: password.value,
+      });
+      const token = response.data.access;
+      authStore.setToken(token);
+      if (authStore.isAdmin === false) {
+        Logout();
+        errorMessage.value = "Usuário não é admin, permissão negada!";
       }
+      if (authStore.isAdmin === true) {
+        router.push("/");
+      }
+    } catch (error) {
+      errorMessage.value = "Erro ao fazer login";
     }
   };
   </script>

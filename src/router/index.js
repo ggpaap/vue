@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginPage from "../views/LoginPage.vue";
 import CadastroPage from "../views/CadastroPage.vue";
 
+
 const routes = [
     {
       path: '/',
