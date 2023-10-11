@@ -25,6 +25,7 @@
   const authStore = useAuthStore();
   import { useAuthStore } from "@/stores/auth";
   
+  
   const router = useRouter();
   const email = ref("");
   const password = ref("");
