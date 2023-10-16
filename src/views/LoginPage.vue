@@ -20,13 +20,15 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 import axios from "axios";
-const authStore = useAuthStore();
+
 import { useAuthStore } from "@/stores/auth";
+import { useRouter } from "vue-router";
 
-
+const authStore = useAuthStore();
 const router = useRouter();
+
+
 const email = ref("");
 const password = ref("");
 const errorMessage = ref("");
@@ -43,13 +45,13 @@ const login = async () => {
     });
     const token = response.data.access;
     authStore.setToken(token);
-    if (authStore.isAdmin === false) {
-      Logout();
-      errorMessage.value = "Usuário não é admin, permissão negada!";
-    }
-    if (authStore.isAdmin === true) {
-      router.push("/");
-    }
+    // if (authStore.isAdmin === false) {
+    //   Logout();
+    //   errorMessage.value = "Usuário não é admin, permissão negada!";
+    // }
+    // if (authStore.isAdmin === true) {
+    router.push("/");
+    // }
   } catch (error) {
     errorMessage.value = "Erro ao fazer login";
   }
