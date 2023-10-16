@@ -13,13 +13,12 @@ const authStore = useAuthStore();
     <div v-if="authStore.isLogged === true">
       <CabecalhoCompAdmin />
     </div>
-  
     <div v-else>
       <CabecalhoCompNotLogged />
     </div>
   </div>
   <main>
-    <router-view></router-view>
+    <router-view />
   </main>
 </template>
 <style scoped>

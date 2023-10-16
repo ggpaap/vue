@@ -29,7 +29,6 @@
     },
     methods: {
       salvarDados() {
-  
         console.log(this.dados);
       },
     },

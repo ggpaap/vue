@@ -1,27 +1,27 @@
 <script setup>
 import{ref, onMounted} from 'vue'
-import genreService from '../services/genres.js';
+// import genreService from '../services/genres.js';
 
-const genres = ref([])
-const currentGenre = ref ({
-  name: ''
-})
-
-
-onMounted(async() => {
-  const data = await genreService.getAllGenres()
-  console.log(data)
-  genres.value = data
-})
+// const genres = ref([])
+// const currentGenre = ref ({
+//   name: ''
+// })
 
 
-async function save() {
-  genreService.saveGenre(currentGenre.value)
-  const data = await genreService.getAllGenres()
-  genres.value = data
-  currentGenre.value = { name: '' }
+// onMounted(async() => {
+//   const data = await genreService.getAllGenres()
+//   console.log(data)
+//   genres.value = data
+// })
 
-}
+
+// async function save() {
+//   genreService.saveGenre(currentGenre.value)
+//   const data = await genreService.getAllGenres()
+//   genres.value = data
+//   currentGenre.value = { name: '' }
+
+// }
 
 
 // async function deleteGenre(genre) {
