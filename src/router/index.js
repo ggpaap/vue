@@ -4,8 +4,6 @@ import AdminPage from "../views/AdminPage.vue";
 import LoginPage from "../views/LoginPage.vue";
 import CadastroPage from "../views/CadastroPage.vue";
 
-
-
 const routes = [
     {
       path: '/',
@@ -18,9 +16,10 @@ const routes = [
       component: LoginPage,
     },
     {
-      path: "/Admin",
+      path: "/admin/:id",
       name: 'Admin',
       component: AdminPage,
+      props: true,
     },
     {
       path:"/cadastro",

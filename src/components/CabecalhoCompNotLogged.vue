@@ -22,7 +22,7 @@ function goToHome() {
         <h1>OURFOOD</h1>
       </div>
       <div class="icons">
-        <img @click="goToLogin" alt="admin" src="@/assets/imgs/perfil.jpeg">
+        <img @click="goToLogin" src="@/assets/imgs/perfil.jpeg">
       </div>
     </div>
     <div class="btns">
@@ -32,7 +32,6 @@ function goToHome() {
 
   </header>
 </template>
-
 <style scoped>
 
 .logo {

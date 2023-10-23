@@ -1,15 +1,12 @@
 <script setup>
-  import { useRouter } from "vue-router";
-
+import { useRouter } from "vue-router";
+import { useAuthStore } from "@/stores/auth";
+const authStore = useAuthStore();
 const router = useRouter();
 
-// function goToUser() {
-//   router.push('/')
-// }
-
-// function goToCadastro(){
-//   router.push('/cadastro')
-// }
+function goToAdmin() {
+  router.push(`/admin/${authStore.userId}`);
+}
 
 function goToHome() {
   router.push('/')
@@ -22,7 +19,7 @@ function goToHome() {
         <h1>OURFOOD</h1>
       </div>
       <div class="icons">
-        <img @click="goToLogin" alt="admin" src="@/assets/imgs/perfil.jpeg">
+        <img @click="goToAdmin" src="@/assets/imgs/perfil.jpeg">
       </div>
     </div>
     <div class="btns">
