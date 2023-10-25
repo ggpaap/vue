@@ -58,9 +58,8 @@ async function excluir(usuario) {
       <div class="usuario-imagem">
         <img class="foto" v-if="usuario.foto" :src="usuario.foto.url" alt="" />
         <p v-else class="foto sem-img">
-          Usuario<br />
-          Sem<br />
-          Imagem
+          ADMIN<br />
+
         </p>
       </div>
       <div class="usuario-info">
@@ -75,7 +74,7 @@ async function excluir(usuario) {
         </div>
         <div class="first_name">
           <label class="label-user-login-cadastro" for="first_name"
-            >Primeiro Nome:
+            >Nome:
           </label>
           <input
             class="input-user-login-cadastro"
@@ -83,17 +82,7 @@ async function excluir(usuario) {
             type="text"
             v-model="usuario.first_name"
           />
-        </div>
-        <div class="last_name">
-          <label class="label-user-login-cadastro" for="last_name"
-            >Último Nome:
-          </label>
-          <input
-            class="input-user-login-cadastro"
-            id="last_name"
-            type="text"
-            v-model="usuario.last_name"
-          />
+        
         </div>
         <div class="telefone">
           <label class="label-user-login-cadastro" for="telefone"
@@ -106,8 +95,8 @@ async function excluir(usuario) {
             v-model="usuario.telefone"
           />
         </div>
-        <div class="cpf">
-          <label class="label-user-login-cadastro" for="cpf">CPF: </label>
+        <div class="Endereço">
+          <label class="label-user-login-cadastro" for="endereço">Endereço: </label>
           <input
             class="input-user-login-cadastro"
             id="cpf"
@@ -130,7 +119,6 @@ async function excluir(usuario) {
       </div>
       <div class="usuario-edit">
         <button class="confirmacao" @click="excluir(usuario)">
-          <span class="excluir">Excluir Conta</span>
           <span class="certeza">Certeza?</span>
         </button>
         <button class="sair" @click="Logout()">Sair</button>
@@ -141,7 +129,7 @@ async function excluir(usuario) {
 </template>
 <style scoped>
 .form {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(252, 94, 3, 0.8);
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -156,15 +144,7 @@ async function excluir(usuario) {
   justify-content: center;
   align-items: center;
 }
-.usuario-imagem {
-  width: 100px;
-  height: 100px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #f1ebf7;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 130px;
-}
+
 .foto {
   height: 100%;
   width: 100%;
@@ -203,9 +183,8 @@ button:hover .certeza {
 .email,
 .password,
 .first_name,
-.last_name,
 .telefone,
-.cpf,
+.endereço,
 .data_nascimento {
   display: flex;
   flex-direction: row;
@@ -228,22 +207,10 @@ button:hover .certeza {
   justify-content: center;
   display: flex;
 }
-.confirmacao {
-  background-color: black;
-  color: white;
-  font-weight: bolder;
-  font-size: 15px;
-}
-.confirmacao:hover {
-  background-color: rgb(243, 10, 10);
-  font-size: 15px;
-  font-weight: bolder;
-  color: white;
-  border: none;
-}
+
 .usuario-info {
   width: 450px;
-  background-color: #f1ebf7;
+  background-color: #ffffff;
   padding: 4%;
   border-radius: 10px;
   margin: 10px;
@@ -254,13 +221,13 @@ button:hover .certeza {
   padding: 4%;
   border-radius: 10px;
   font-weight: bold;
-  background-color: #f1ebf7;
+  background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
 }
 .carrinho:hover,
 .salvar:hover,
 .sair:hover {
-  background-color: #f1ebf7;
+  background-color: #ffffff;
 }
 </style>
