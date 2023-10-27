@@ -41,26 +41,16 @@ async function salvar() {
   }
 }
 
-async function excluir(usuario) {
-  const confirmado = window.confirm(
-    "Tem certeza que deseja excluir a conta? Ela será excluída permanentemente!"
-  );
-  if (confirmado) {
-    await usuariosApi.excluirUsuario(usuario.id);
-    window.alert("Sua conta foi excluída com sucesso!");
-    Logout();
-  }
-}
+
 </script>
 <template>
   <div class="form-centralizado">
     <div class="form">
       <div class="usuario-imagem">
         <img class="foto" v-if="usuario.foto" :src="usuario.foto.url" alt="" />
-        <p v-else class="foto sem-img">
           ADMIN<br />
 
-        </p>
+        
       </div>
       <div class="usuario-info">
         <div class="email">
@@ -95,7 +85,7 @@ async function excluir(usuario) {
             v-model="usuario.telefone"
           />
         </div>
-        <div class="Endereço">
+        <div class="endereço">
           <label class="label-user-login-cadastro" for="endereço">Endereço: </label>
           <input
             class="input-user-login-cadastro"
@@ -104,23 +94,10 @@ async function excluir(usuario) {
             v-model="usuario.cpf"
           />
         </div>
-        <div class="data_nascimento">
-          <label class="label-user-login-cadastro" for="data_nascimento"
-            >Data de Nascimento:
-          </label>
-          <input
-            class="input-user-login-cadastro"
-            type="date"
-            id="data_nascimento"
-            v-model="usuario.data_nascimento"
-            required
-          />
-        </div>
+       
       </div>
       <div class="usuario-edit">
-        <button class="confirmacao" @click="excluir(usuario)">
-          <span class="certeza">Certeza?</span>
-        </button>
+       
         <button class="sair" @click="Logout()">Sair</button>
         <button class="salvar" @click="salvar">Salvar Dados</button>
       </div>
@@ -174,12 +151,7 @@ async function excluir(usuario) {
 button .certeza {
   display: none;
 }
-button:hover .excluir {
-  display: none;
-}
-button:hover .certeza {
-  display: inline;
-}
+
 .email,
 .password,
 .first_name,

@@ -11,12 +11,15 @@ export default {
   async created() {
     this.categorias = await categoriasApi.buscarTodasAsCategorias();
   },
+  
 };
 </script>
 <template>  
   <hr/>
   <div>
     <h3 class="title" v-for="categoria in categorias" :key="categoria.id">{{ categoria.descricao }}</h3>
+    <h2 class="title" v-for="descricao in descricao" :Key="descricao.id" >{{ descricao.descricao }}</h2>
+
   </div>
 </template>
 
