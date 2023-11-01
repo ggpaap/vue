@@ -1,25 +1,36 @@
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
+
 import CategoriasApi from "@/api/categorias";
 const categoriasApi = new CategoriasApi();
-export default {
-  data() {
-    return {
-      categorias: [],
-      categoria: {},
-    };
-  },
-  async created() {
-    this.categorias = await categoriasApi.buscarTodasAsCategorias();
-  },
-  
-};
+import { useProdutosStore } from "../stores/produtos";
+const produtosStore = useProdutosStore()
+
+const categorias = ref([])
+
+onMounted(async () => {
+  const data = await categoriasApi.buscarTodasAsCategorias();
+  categorias.value = data
+  await produtosStore.buscarProdutos()
+})
 </script>
 <template>  
   <hr/>
   <div>
-    <h3 class="title" v-for="categoria in categorias" :key="categoria.id">{{ categoria.descricao }}</h3>
-    <h2 class="title" v-for="descricao in descricao" :Key="descricao.id" >{{ descricao.descricao }}</h2>
+    <template  v-for="categoria in categorias" :key="categoria.id">
+      <h3 class="title">{{ categoria.descricao }}</h3>
+      <div v-if="produtosStore.produtosPorCategoria(categoria.id).length === 0">
+        <p>Sem produtos nesta categoria</p>
+      </div>
+      <div v-else>
+        <div v-for="produto in produtosStore.produtosPorCategoria(categoria.id)">
+          <p>{{produto.nome}}</p>
+          <p>{{produto.preco}}</p>
+          <img :src="produto.capa?.file" alt="Imagem">
+        </div>
+      </div>
 
+    </template>
   </div>
 </template>
 

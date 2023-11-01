@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 
+
 const parseJwt = (token) => {
   try {
     return JSON.parse(atob(token.split(".")[1]));
