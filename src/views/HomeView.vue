@@ -45,5 +45,25 @@ h3{
   text-align: center;
   margin: 2rem 0;
 }
+.produto {
+  display: inline-block; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  max-width: 200px;
+  width: 30%; 
+}
+
+.produto img {
+  max-width: 100%;
+}
+
+.sem-produtos {
+  font-style: italic;
+  text-align: center;
+  color: #888;
+  margin-top: 10px;
+}
 
 </style>
