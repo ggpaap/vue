@@ -20,11 +20,7 @@ const usuario = ref({
   email: "",
   password: "",
   first_name: "",
-  last_name: "",
-  telefone: "",
-  cpf: "",
-  data_nascimento: "",
-  foto: "",
+
 });
 
 onMounted(async () => {
@@ -74,27 +70,7 @@ async function salvar() {
           />
         
         </div>
-        <div class="telefone">
-          <label class="label-user-login-cadastro" for="telefone"
-            >Telefone:
-          </label>
-          <input
-            class="input-user-login-cadastro"
-            id="telefone"
-            type="tel"
-            v-model="usuario.telefone"
-          />
-        </div>
-        <div class="endereço">
-          <label class="label-user-login-cadastro" for="endereço">Endereço: </label>
-          <input
-            class="input-user-login-cadastro"
-            id="cpf"
-            type="text"
-            v-model="usuario.cpf"
-          />
-        </div>
-       
+        
       </div>
       <div class="usuario-edit">
        
