@@ -44,7 +44,7 @@ async function salvar() {
     <div class="form">
       <div class="usuario-imagem">
         <img class="foto" v-if="usuario.foto" :src="usuario.foto.url" alt="" />
-          ADMIN<br />
+          Admin<br />
 
         
       </div>
