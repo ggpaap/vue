@@ -70,6 +70,30 @@ async function salvar() {
           />
         
         </div>
+        <div class="first_name">
+          <label class="label-user-login-cadastro" for="first_name"
+            >Produto:
+          </label>
+          <input
+            class="input-user-login-cadastro"
+            id="first_name"
+            type="text"
+            v-model="usuario.first_name"
+          />
+          <div class="first_name">
+          <label class="label-user-login-cadastro" for="first_name"
+            >Quantidade:
+          </label>
+          <input
+            class="input-user-login-cadastro"
+            id="first_name"
+            type="text"
+            v-model="usuario.first_name"
+          />
+        
+        </div>
+        
+        </div>
         
       </div>
       <div class="usuario-edit">
@@ -131,7 +155,6 @@ button .certeza {
 .email,
 .password,
 .first_name,
-.telefone,
 .endereço,
 .data_nascimento {
   display: flex;
