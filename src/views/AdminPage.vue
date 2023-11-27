@@ -70,27 +70,28 @@ async function salvar() {
           />
         
         </div>
-        <div class="first_name">
-          <label class="label-user-login-cadastro" for="first_name"
+        <div class="produto" >
+          <label class="label-user-login-cadastro" for="produto"
             >Produto:
           </label>
           <input
             class="input-user-login-cadastro"
-            id="first_name"
+            id="produto"
             type="text"
-            v-model="usuario.first_name"
+            v-model="usuario.produto"
           />
-          <div class="first_name">
-          <label class="label-user-login-cadastro" for="first_name"
+          <div >
+          <div class="quantidade">
+          <label class="label-user-login-cadastro" for="quantidade"
             >Quantidade:
           </label>
           <input
             class="input-user-login-cadastro"
-            id="first_name"
+            id="quantidade"
             type="text"
             v-model="usuario.first_name"
           />
-        
+          </div>
         </div>
         
         </div>
@@ -134,6 +135,7 @@ async function salvar() {
 }
 .label-user-login-cadastro {
   font-size: 18px;
+  margin-right: 100px;
   cursor: pointer;
   text-align: center;
   width: 300px;
@@ -157,7 +159,6 @@ button .certeza {
 .first_name,
 .endereço,
 .data_nascimento {
-  display: flex;
   flex-direction: row;
 }
 .carrinho,
@@ -181,10 +182,12 @@ button .certeza {
 
 .usuario-info {
   width: 450px;
+  height: 300px;
   background-color: #ffffff;
   padding: 4%;
   border-radius: 10px;
   margin: 10px;
+  
 }
 .usuario-edit {
   width: 450px;
