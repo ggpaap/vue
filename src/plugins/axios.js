@@ -2,7 +2,7 @@ import axios from "axios";
 import { useAuthStore } from "@/stores/auth";
 import { storeToRefs } from "pinia";
 
-axios.defaults.baseURL = "https://ourfood-backend-dev-rmcf.3.us-1.fl0.io/api/";
+axios.defaults.baseURL = "https://ourfood-backend.1.us-1.fl0.io/api/";
 
 axios.interceptors.request.use(
   (config) => {

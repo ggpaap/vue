@@ -35,7 +35,7 @@ const errorMessage = ref("");
 
 const login = async () => {
   try {
-    const response = await axios.post("https://ourfood-backend-dev-rmcf.3.us-1.fl0.io/api/token/", {
+    const response = await axios.post("https://ourfood-backend.1.us-1.fl0.io/api/token/", {
       email: email.value,
       password: password.value,
     });
