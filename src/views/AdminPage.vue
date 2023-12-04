@@ -44,61 +44,44 @@ async function salvar() {
     <div class="form">
       <div class="usuario-imagem">
         <img class="foto" v-if="usuario.foto" :src="usuario.foto.url" alt="" />
-          Admin<br />
+        Admin<br />
 
-        
+
       </div>
       <div class="usuario-info">
         <div class="email">
           <label class="label-user-login-cadastro" for="email">Email: </label>
-          <input
-            class="input-user-login-cadastro"
-            id="email"
-            type="email"
-            v-model="usuario.email"
-          />
+          <input class="input-user-login-cadastro" id="email" type="email" v-model="usuario.email" />
         </div>
         <div class="first_name">
-          <label class="label-user-login-cadastro" for="first_name"
-            >Nome:
+          <label class="label-user-login-cadastro" for="first_name">Nome:
           </label>
-          <input
-            class="input-user-login-cadastro"
-            id="first_name"
-            type="text"
-            v-model="usuario.first_name"
-          />
-        
+          <input class="input-user-login-cadastro" id="first_name" type="text" v-model="usuario.first_name" />
         </div>
-        <div class="produto" >
-          <label class="label-user-login-cadastro" for="produto"
-            >Produto:
+        <div class="first_name">
+          <label class="label-user-login-cadastro" for="cpf">CPF:ㅤㅤㅤ   
           </label>
-          <input
-            class="input-user-login-cadastro"
-            id="produto"
-            type="text"
-            v-model="usuario.produto"
-          />
-          <div >
-          <div class="quantidade">
-          <label class="label-user-login-cadastro" for="quantidade"
-            >Quantidade:
+          <input class="input-user-login-cadastro" id="cpf" type="text" v-model="usuario.cpf" />
+        </div>
+
+
+        <div class="produto">
+          <label class="label-user-login-cadastro" for="produto">Sobrenome:
           </label>
-          <input
-            class="input-user-login-cadastro"
-            id="quantidade"
-            type="text"
-            v-model="usuario.first_name"
-          />
+          <input class="input-user-login-cadastro" id="produto" type="text" v-model="usuario.last_name" />
+          <div>
+            <div class="quantidade">
+              <label class="label-user-login-cadastro" for="telefone">Telefone:
+              </label>
+              <input class="input-user-login-cadastro" id="telefone" type="text" v-model="usuario.telefone" />
+            </div>
           </div>
+
         </div>
-        
-        </div>
-        
+
       </div>
       <div class="usuario-edit">
-       
+
         <button class="sair" @click="Logout()">Sair</button>
         <button class="salvar" @click="salvar">Salvar Dados</button>
       </div>
@@ -117,22 +100,26 @@ async function salvar() {
   flex-direction: column;
   margin: 80px 0;
 }
+
 .form-centralizado {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
 .foto {
   height: 100%;
   width: 100%;
   border-radius: 100%;
 }
+
 .sem-img {
   line-height: normal;
   display: inline-block;
   vertical-align: middle;
 }
+
 .label-user-login-cadastro {
   font-size: 18px;
   margin-right: 100px;
@@ -141,6 +128,7 @@ async function salvar() {
   width: 300px;
   margin-top: 10px;
 }
+
 .input-user-login-cadastro {
   padding: 5px;
   margin-bottom: 10px;
@@ -150,6 +138,7 @@ async function salvar() {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 button .certeza {
   display: none;
 }
@@ -161,6 +150,7 @@ button .certeza {
 .data_nascimento {
   flex-direction: row;
 }
+
 .carrinho,
 .confirmacao,
 .salvar,
@@ -182,13 +172,14 @@ button .certeza {
 
 .usuario-info {
   width: 450px;
-  height: 300px;
+  height: 350px;
   background-color: #ffffff;
   padding: 4%;
   border-radius: 10px;
   margin: 10px;
-  
+
 }
+
 .usuario-edit {
   width: 450px;
   height: 50px;
@@ -199,6 +190,7 @@ button .certeza {
   display: flex;
   flex-wrap: wrap;
 }
+
 .carrinho:hover,
 .salvar:hover,
 .sair:hover {
